@@ -1,0 +1,61 @@
+/* GENERAL ****************************************************************************** */
+
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root {
+    --yellow: #FFEA6C;
+    --magenta: #F00B64;
+    --pink: #F287B6;
+}
+
+html {
+    color: black;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    background: var(--yellow);
+}
+
+nav {
+    background: var(--magenta);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    display: inline-block;
+}
+
+.nav-internal a {
+    padding: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    transition: 0.2s;
+}
+
+.nav-internal a:hover, a:active {
+    background: var(--yellow);
+    color: black;
+}
+
+.nav-external a {
+    font-size: 1.5rem;
+    padding: 0 0.25rem;
+    transition: 0.1s;
+}
+
+.nav-external a:hover {
+    color: var(--yellow);
+}
