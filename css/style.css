@@ -32,7 +32,7 @@ h1 {
     text-align: center;
     color: var(--purple);
     font-family: 'Bungee Shade', sans-serif;
-    padding: 5rem 0 3rem;
+    padding: 5vw 0 5vw;
     letter-spacing: 0.07em;
 }
 
@@ -42,7 +42,7 @@ h2 {
     color: var(--purple);
     font-family: 'Unna', serif;
     letter-spacing: 0.05em;
-    padding: 0 0 5rem;
+    padding: 0 0 7vw;
 }
 
 p {
@@ -54,7 +54,7 @@ p {
 
 header {
     background-attachment: fixed;
-    background-image: url(../assets/etusivu/etusivu.jpg);
+    background-image: url(../assets/etusivu/etusivu-ajak.jpg);
     background-position: center center;
     background-size: cover;
     height: 100vh;
@@ -90,7 +90,7 @@ nav a {
     letter-spacing: 0.05em;
     transition: 0.2s;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .nav-internal a:hover, a:active {
@@ -102,7 +102,6 @@ nav a {
     font-size: 1.5rem;
     padding: 1rem;
     transition: 0.1s;
-
 }
 
 .fa-home:hover {
@@ -129,34 +128,43 @@ nav a {
 
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
     .hamburger {
         display: inline-block;
-        font-size: 1.5rem;
+        font-size: 1rem;
         height: 2rem;
         color: white;
         position: absolute;
-        right: 1rem;
-        top: 1rem;
+        right: 0;
+        top: 0;
+        padding: 0.8rem;
+        transition: 0.1s;
+    }
+
+    .fa-home {
+        font-size: 1rem;
+        padding: 0.8rem;
+        transition: 0.1s;
+
     }
 
     .nav-internal {
         display: none;
         position: absolute;
-        top: 1.2rem;
-        left: 6rem;
+        top: 1.1rem;
+        left: 5rem;
     }
 
     .nav-external {
         display: none;
         position: absolute;
-        top: 1.2rem;
-        right: 6rem;
+        top: 1.1rem;
+        right: 5rem;
     }
 
     .nav-internal a, .nav-external a {
         display: block;
-        padding: 0 0 1.5rem;
+        padding: 0 0 2rem;
     }
 
     .nav-internal a:hover {
@@ -165,7 +173,7 @@ nav a {
     }
 
     nav:hover {
-        height: 55vh;
+        height: 24rem;
     }
 
     nav:hover .nav-internal {
@@ -176,12 +184,21 @@ nav a {
         display: block;
     }
 
+    nav:hover .fa-home{
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    nav:hover .hamburger {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
     
 
 
 }
 
-/* MAIN ******************************************* */
+/* MAIN ******************************************************************************************************* */
 
 
 .name-slogan {
@@ -189,27 +206,123 @@ nav a {
 }
 
 .main-content {
-    padding: 4rem 12vw;
+    padding: 7vw 12vw;
 }
 
 .video {
     box-shadow: -1.5rem 1.5rem var(--purple);
     margin: 0 0 1.5rem 1.5rem;
     background: black;
-    border-radius: 6px;
+    border-radius: 4px;
 }
 
 .video-facebook {
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
 }
 
 .video-facebook iframe {
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
+
+/* FOOTER ******************************************************************************************************* */
+
+footer {
+    background: var(--yellow);
+    color: var(--purple);
+    padding: 5vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 8vw 8vw;
+    grid-template-areas:
+    "vasemmisto-logo footer-social-media back-to-top"
+    "vasemmisto-logo footer-ajak footer-xurxe";
+    grid-gap: 2vw;
+    align-items: end;
+}
+
+footer p {
+    padding: 0;
+}
+
+.small-font {
+    font-size: 12px;
+}
+
+footer a {
+    color: var(--purple);
+    transition: 0.1s;
+}
+
+footer a:hover {
+    color: var(--magenta);
+}
+
+.vasemmisto-logo {
+    height: 17vw;
+    width: 17vw;
+    background: var(--magenta);
+    grid-area: vasemmisto-logo;
+}
+
+.footer-social-media {
+    grid-area: footer-social-media;
+    font-size: 2rem;
+    padding: 0;
+}
+
+.footer-social-media a {
+    padding: 0 0.5rem 0 0;
+}
+
+.back-to-top {
+    grid-area: back-to-top;
+    justify-self: end;
+    font-size: 3rem;
+    padding: 0;
+}
+
+.footer-ajak {
+    grid-area: footer-ajak;
+}
+
+.footer-xurxe {
+    grid-area: footer-xurxe;
+    justify-self: end;
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        grid-template-columns: auto;
+        grid-template-rows: 20vw auto auto auto auto;
+        grid-template-areas:
+        "vasemmisto-logo"
+        "footer-social-media"
+        "footer-ajak"
+        "back-to-top"
+        "footer-xurxe";
+        grid-gap: 5vw;
+        justify-items: center;
+        padding: 7vw;
+    }
+
+    .vasemmisto-logo {
+        height: 20vw;
+        width: 70vw;
+    }
+    
+    .back-to-top {
+        justify-self: center;
+    }
+    
+    .footer-xurxe {
+        justify-self: center;
+    }
+}
+
