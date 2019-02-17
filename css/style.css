@@ -9,7 +9,7 @@
 }
 
 :root {
-    --yellow: #ffea75;
+    --yellow: #FFE964;
     --magenta: #F00B64;
     --pink: #F287B6;
     --purple: #8f44cc;
@@ -87,6 +87,10 @@ p {
     box-shadow: -0.7rem 0.7rem var(--yellow);
     margin: 0 0 0.7rem 0.7rem;
     border-radius: 4px;
+}
+
+img {
+    width: 100%;
 }
 
 /* HEADER ***************************************************************************************************** */
@@ -245,6 +249,26 @@ nav a {
 
 .main-top {
     padding: 7vw;
+    text-align: center;
+}
+
+.vasemmisto-logo-main {
+    width: 350px;
+    margin: 3rem 0;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .vasemmisto-logo-main {
+        width: calc(200px + (350 - 200) * (100vw - 600px) / (900 - 600));
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .vasemmisto-logo-main {
+        width: 200px;
+    }
+
 }
 
 .main-grid {
@@ -256,19 +280,16 @@ nav a {
     grid-template-rows: auto;
     width: 100%;
     padding-left: 8vw;
-    padding-right: 6vw;
+    padding-right: 10vw;
 }
 
-.main-grid img {
-    width: 100%;
-}
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
     .main-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        padding-left: calc(25px + (54 - 25) * (100vw - 600px) / (900 - 600));
-        padding-right: calc(35px + (72 - 35) * (100vw - 600px) / (900 - 600));    
+        padding-left: calc(25px + (72 - 25) * (100vw - 600px) / (900 - 600)); 
+        padding-right: calc(35px + (90 - 35) * (100vw - 600px) / (900 - 600));    
     }
 
 }
@@ -277,8 +298,8 @@ nav a {
     .main-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        padding-left: 35px;
-        padding-right: 25px;
+        padding-left: 25px;
+        padding-right: 35px;
     }
 
 }
@@ -325,20 +346,45 @@ nav a {
 footer {
     background: var(--purple);
     color: white;
-    padding: 1rem 5vw;
+    padding: 5vw;
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 8vw 8vw;
+    grid-template-columns: 0.6fr 1fr 1fr;
+    grid-template-rows: 6vw 4vw;
     grid-template-areas:
-    "vasemmisto-logo footer-social-media back-to-top"
-    "vasemmisto-logo footer-ajak footer-xurxe";
+    "vasemmisto-logo footer-ajak footer-social-media"
+    "vasemmisto-logo footer-xurxe back-to-top";
     grid-gap: 2vw;
     align-items: end;
-
 }
 
-footer p {
-    padding: 0;
+.vasemmisto-logo {
+    width: 12vw;
+    grid-area: vasemmisto-logo;
+    align-self: center;
+}
+
+.vasemmisto-logo-square {
+    display: block;
+}
+
+.vasemmisto-logo-long {
+    display: none;
+}
+
+.vasemmisto-logo-square-hover {
+    display: none;
+}
+
+.vasemmisto-logo-long-hover {
+    display: none;
+}
+
+.vasemmisto-logo:hover .vasemmisto-logo-square {
+    display: none;
+}
+
+.vasemmisto-logo:hover .vasemmisto-logo-square-hover {
+    display: block;
 }
 
 .small-font {
@@ -354,27 +400,23 @@ footer a:hover {
     color: var(--yellow);
 }
 
-.vasemmisto-logo {
-    height: 17vw;
-    width: 17vw;
-    background: var(--yellow);
-    grid-area: vasemmisto-logo;
-}
 
 .footer-social-media {
     grid-area: footer-social-media;
     font-size: 2rem;
     padding: 0;
+    justify-self: end;
+
 }
 
 .footer-social-media a {
-    padding: 0 0.5rem 0 0;
+    padding: 0 0 0 0.5em;
 }
 
 .back-to-top {
     grid-area: back-to-top;
     justify-self: end;
-    font-size: 3rem;
+    font-size: 1.5rem;
     padding: 0;
 }
 
@@ -384,35 +426,56 @@ footer a:hover {
 
 .footer-xurxe {
     grid-area: footer-xurxe;
-    justify-self: end;
 }
 
 @media only screen and (max-width: 600px) {
     footer {
-        grid-template-columns: auto;
+        grid-template-columns: 100%;
         grid-template-rows: 20vw auto auto auto auto;
         grid-template-areas:
         "vasemmisto-logo"
-        "footer-social-media"
         "footer-ajak"
-        "back-to-top"
-        "footer-xurxe";
+        "footer-social-media"
+        "footer-xurxe"
+        "back-to-top";
         grid-gap: 5vw;
         justify-items: center;
         padding: 7vw;
     }
 
     .vasemmisto-logo {
-        height: 20vw;
-        width: 70vw;
+        width: 50vw;
+    }
+
+    .vasemmisto-logo-square {
+        display: none;
     }
     
-    .back-to-top {
-        justify-self: center;
+    .vasemmisto-logo-long {
+        display: block;
     }
     
-    .footer-xurxe {
+    .vasemmisto-logo-square-hover {
+        display: none;
+    }
+    
+    .vasemmisto-logo-long-hover {
+        display: none;
+    }
+    
+    .vasemmisto-logo:hover .vasemmisto-logo-long {
+        display: none;
+    }
+
+    .vasemmisto-logo:hover .vasemmisto-logo-square-hover {
+        display: none;
+    }
+    
+    .vasemmisto-logo:hover .vasemmisto-logo-long-hover {
+        display: block;
+    }
+    
+    .footer-ajak, .footer-social-media, .footer-xurxe, .back-to-top {
         justify-self: center;
     }
 }
-
