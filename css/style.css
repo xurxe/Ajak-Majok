@@ -65,7 +65,7 @@ p {
     background-attachment: fixed;
     background-image: url(../assets/etusivu/etusivu-ajak.jpg);
     background-position: center center;
-    background-size: cover;
+    background-size: 100% auto;
     height: 100vh;
     position: relative;
 }
@@ -222,25 +222,25 @@ nav a {
 
 .subpage-name {
     background: var(--yellow);
-    padding-top: 3.5rem;
+    padding-top: 8vh;
 }
 
 .main-content {
     padding: 7vw 12vw;
 }
 
-.video {
+.shadow-purple {
     box-shadow: -1.5rem 1.5rem var(--purple);
     margin: 0 0 1.5rem 1.5rem;
-    background: black;
     border-radius: 4px;
 }
 
 .video-facebook {
     overflow: hidden;
-    padding-bottom: 56.25%;
+    padding-bottom: 55%;
     position: relative;
     height: 0;
+    background: black;
 }
 
 .video-facebook iframe {
