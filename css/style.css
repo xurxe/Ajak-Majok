@@ -32,31 +32,60 @@ h1 {
     text-align: center;
     color: var(--purple);
     font-family: 'Bungee Shade', sans-serif;
-    padding: 5vw 0 5vw;
     letter-spacing: 0.07em;
 }
 
-.h1-etusivu {
-    font-size: 10vw;
-    text-align: center;
-    color: var(--purple);
-    font-family: 'Bungee Shade', sans-serif;
-    padding: 5vw 0 5vw;
-    letter-spacing: 0.07em;
-}
-
-.h2-etusivu {
-    font-size: 4.7vw;
-    text-align: center;
+h2 {
+    font-size: 3.7vw;
+    text-align: left;
     color: var(--purple);
     font-family: 'Unna', serif;
     letter-spacing: 0.05em;
-    padding: 0 0 7vw;
+    padding: 0.5em 0;
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    h2 {
+        font-size: calc(26px + (33.3 - 26) * (100vw - 600px) / (900 - 600));
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    h2 {
+        font-size: 26px;
+    }
+
+}
+
+.h1-etusivu {
+    font-size: 8vw;
+}
+
+.h2-etusivu {
+    text-align: center;
 }
 
 p {
-    padding: 0 0 4rem;
-    line-height: 2rem;
+    padding: 0 0 1rem;
+    line-height: 1.5rem;
+}
+
+.paragraph-group {
+    padding: 1rem 0;
+}
+
+.shadow-purple {
+    box-shadow: -1.4rem 1.4rem var(--purple);
+    margin: 0 0 1.4rem 1.4rem;
+    border-radius: 4px;
+}
+
+.shadow-yellow {
+    box-shadow: -0.7rem 0.7rem var(--yellow);
+    margin: 0 0 0.7rem 0.7rem;
+    border-radius: 4px;
 }
 
 /* HEADER ***************************************************************************************************** */
@@ -65,7 +94,7 @@ p {
     background-attachment: fixed;
     background-image: url(../assets/etusivu/etusivu-ajak.jpg);
     background-position: center center;
-    background-size: 100% auto;
+    background-size: cover;
     height: 100vh;
     position: relative;
 }
@@ -103,13 +132,11 @@ nav a {
 }
 
 .nav-internal a:hover {
-    background: var(--yellow);
-    color: var(--purple-superdark);
+    color: var(--yellow);
 }
 
 .active {
-    background: var(--yellow);
-    color: var(--purple);
+    color: var(--yellow);
 }
 
 .fa-home {
@@ -215,24 +242,59 @@ nav a {
 
 /* MAIN ******************************************************************************************************* */
 
-
-.name-slogan {
-    background: var(--yellow);
+.main-top {
+    padding: 7vw;
 }
 
-.subpage-name {
-    background: var(--yellow);
-    padding-top: 8vh;
+.main-grid {
+    display: grid;
+    grid-auto-flow: row;
+    grid-column-gap: 4vw;
+    grid-row-gap: 3vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    width: 100%;
+    padding: 2vw 8vw 10vw 6vw;
 }
 
-.main-content {
-    padding: 7vw 12vw;
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .main-grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto;
+    }
+
 }
 
-.shadow-purple {
-    box-shadow: -1.5rem 1.5rem var(--purple);
-    margin: 0 0 1.5rem 1.5rem;
-    border-radius: 4px;
+@media only screen and (max-width: 600px) {
+    .main-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto auto;
+
+    }
+
+}
+
+.main-grid img {
+    width: 100%;
+}
+
+.main-video {
+    padding: 0 15vw 5vw;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .main-video {
+        padding-left: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));
+        padding-right: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));        
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .main-video {
+        padding: 0 25px 5vw;
+    }
+
 }
 
 .video-facebook {
@@ -254,9 +316,9 @@ nav a {
 /* FOOTER ******************************************************************************************************* */
 
 footer {
-    background: var(--yellow);
-    color: var(--purple);
-    padding: 5vw;
+    background: var(--purple);
+    color: white;
+    padding: 1rem 5vw;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: 8vw 8vw;
@@ -277,18 +339,18 @@ footer p {
 }
 
 footer a {
-    color: var(--purple);
+    color: white;
     transition: 0.1s;
 }
 
 footer a:hover {
-    color: var(--magenta);
+    color: var(--yellow);
 }
 
 .vasemmisto-logo {
     height: 17vw;
     width: 17vw;
-    background: var(--magenta);
+    background: var(--yellow);
     grid-area: vasemmisto-logo;
 }
 
