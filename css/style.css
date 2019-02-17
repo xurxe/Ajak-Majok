@@ -25,6 +25,7 @@ html {
 
 body {
     background: white;
+    width: 100%;
 }
 
 h1 {
@@ -252,34 +253,39 @@ nav a {
     grid-column-gap: 4vw;
     grid-row-gap: 3vw;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     width: 100%;
-    padding: 2vw 8vw 10vw 6vw;
-}
-
-@media only screen and (min-width: 600px) and (max-width: 900px) {
-    .main-grid {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto auto;
-    }
-
-}
-
-@media only screen and (max-width: 600px) {
-    .main-grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto auto auto auto;
-
-    }
-
+    padding-left: 8vw;
+    padding-right: 6vw;
 }
 
 .main-grid img {
     width: 100%;
 }
 
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .main-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        padding-left: calc(25px + (54 - 25) * (100vw - 600px) / (900 - 600));
+        padding-right: calc(35px + (72 - 35) * (100vw - 600px) / (900 - 600));    
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding-left: 35px;
+        padding-right: 25px;
+    }
+
+}
+
+
 .main-video {
-    padding: 0 15vw 5vw;
+    padding: 5vw 15vw 10vw;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
@@ -292,7 +298,8 @@ nav a {
 
 @media only screen and (max-width: 600px) {
     .main-video {
-        padding: 0 25px 5vw;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
 }
