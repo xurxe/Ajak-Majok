@@ -13,8 +13,7 @@
     --magenta: #F00B64;
     --pink: #F287B6;
     --purple: #8f44cc;
-    --purple-dark: #55287a;
-    --purple-superdark: #1c0d28;
+    --purple-superdark: #2a143d;
 }
 
 html {
@@ -74,7 +73,7 @@ p {
 }
 
 .paragraph-group {
-    padding: 1rem 0;
+    padding: 1rem 0 2rem;
 }
 
 .shadow-purple {
@@ -346,14 +345,15 @@ nav a {
 footer {
     background: var(--purple);
     color: white;
-    padding: 5vw;
+    padding: 5vw 15vw;
     display: grid;
-    grid-template-columns: 0.6fr 1fr 1fr;
+    grid-template-columns: auto auto auto;
     grid-template-rows: 6vw 4vw;
     grid-template-areas:
     "vasemmisto-logo footer-ajak footer-social-media"
     "vasemmisto-logo footer-xurxe back-to-top";
-    grid-gap: 2vw;
+    grid-row-gap: 2vw;
+    grid-column-gap: 2.5rem;
     align-items: end;
 }
 
@@ -388,7 +388,7 @@ footer {
 }
 
 .small-font {
-    font-size: 12px;
+    font-size: 11px;
 }
 
 footer a {
@@ -400,13 +400,12 @@ footer a:hover {
     color: var(--yellow);
 }
 
-
 .footer-social-media {
     grid-area: footer-social-media;
     font-size: 2rem;
     padding: 0;
     justify-self: end;
-
+    align-self: center;
 }
 
 .footer-social-media a {
@@ -422,10 +421,19 @@ footer a:hover {
 
 .footer-ajak {
     grid-area: footer-ajak;
+    align-self: center;
 }
 
 .footer-xurxe {
     grid-area: footer-xurxe;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    footer {
+        padding-left: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));
+        padding-right: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));        
+    }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -438,9 +446,10 @@ footer a:hover {
         "footer-social-media"
         "footer-xurxe"
         "back-to-top";
-        grid-gap: 5vw;
+        grid-row-gap: 1.5rem;
         justify-items: center;
-        padding: 7vw;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     .vasemmisto-logo {
@@ -479,3 +488,4 @@ footer a:hover {
         justify-self: center;
     }
 }
+
