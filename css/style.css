@@ -82,6 +82,22 @@ p {
     border-radius: 4px;
 }
 
+.card-yellow {
+    position: relative;
+}
+
+.card-yellow:before {
+    bottom: 2rem;
+    left: 1.4rem;
+    content: "";
+    position: absolute;
+    background: var(--yellow);
+    width: 100%;
+    height: 8rem;
+    z-index: -10;
+    border-radius: 4px;
+  }
+
 .shadow-yellow {
     box-shadow: -0.7rem 0.7rem var(--yellow);
     margin: 0 0 0.7rem 0.7rem;
@@ -241,15 +257,23 @@ nav .fab {
 .main-grid {
     display: grid;
     grid-auto-flow: row;
-    grid-column-gap: 4vw;
-    grid-row-gap: 3vw;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
     width: 100%;
     padding-left: 8vw;
     padding-right: 10vw;
 }
 
+.main-grid-etusivu {
+    grid-column-gap: 4vw;
+    grid-row-gap: 3vw;
+    grid-template-rows: auto;
+}
+
+.main-grid-blogi {
+    grid-column-gap: 6vw;
+    grid-row-gap: 4vw;
+    grid-template-rows: 30vw;
+}
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
     .main-grid {
@@ -272,12 +296,12 @@ nav .fab {
 }
 
 
-.main-video {
+.main-text-and-image {
     padding: 5vw 15vw 10vw;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
-    .main-video {
+    .main-text-and-image {
         padding-left: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));
         padding-right: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));        
     }
@@ -285,7 +309,7 @@ nav .fab {
 }
 
 @media only screen and (max-width: 600px) {
-    .main-video {
+    .main-text-and-image {
         padding-left: 25px;
         padding-right: 25px;
     }
