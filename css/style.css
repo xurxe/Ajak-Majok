@@ -45,14 +45,6 @@ h2 {
     font-style: normal;
 }
 
-address a {
-    font-size: 2rem;
-    color: var(--purple);
-    font-family: 'Unna', serif;
-    letter-spacing: 0.05em;
-    padding: 0.5em 0;
-    font-style: normal;
-}
 
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
@@ -473,6 +465,24 @@ nav .fab {
 
 }
 
+
+.main-yhteys-social-media a {
+    padding: 0 1rem;
+    font-size: 2.5rem;
+
+}
+
+address {
+    padding: 4rem 0 0;
+}
+
+address a {
+    font-size: 2rem;
+    color: var(--purple);
+    font-family: 'Unna', serif;
+    letter-spacing: 0.05em;
+    font-style: normal;
+}
 
 /* FOOTER ******************************************************************************************************* */
 
