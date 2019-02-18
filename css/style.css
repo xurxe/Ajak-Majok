@@ -367,6 +367,52 @@ nav .fab {
 
 }
 
+.main-holvi {
+    margin: -7vw 15vw 10vw;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.holvi-frame {
+    margin: 0.5rem auto;
+}
+
+.holvi-text {
+    margin: 1rem 0 1rem 3rem;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .main-holvi {
+        margin-left: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));
+        margin-right: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600)); 
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .main-holvi {
+        flex-direction: column;
+    }
+
+    .holvi-text {
+        margin-left: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));
+        margin-right: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600)); 
+    }
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    .main-holvi, .holvi-text {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+
+}
+
+
 /* FOOTER ******************************************************************************************************* */
 
 footer {
