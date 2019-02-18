@@ -115,6 +115,19 @@ img {
     width: 100%;
 }
 
+.photo-caption {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.blog-info {
+    opacity: 0.7;
+}
+
+.main-top a:hover {
+    color: var(--pink);
+}
+
 /* HEADER ***************************************************************************************************** */
 
 .header-etusivu {
