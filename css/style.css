@@ -134,8 +134,7 @@ img {
     background-attachment: fixed;
     background-image: url(../assets/etusivu/etusivu-ajak.jpg);
     background-position: center center;
-    background-size: cover;
-    height: 100vh;
+    background-size: 100vh;
     position: relative;
 }
 
