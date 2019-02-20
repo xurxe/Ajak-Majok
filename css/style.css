@@ -120,6 +120,13 @@ a:hover {
     -o-background-size: cover;
 }
 
+@media only screen and (max-width: 600px) {
+    .header-etusivu {
+        height: auto;
+        width: 100vw;
+    }
+}
+
 nav {
     align-items: start;
     background-color: #8f44cc;
