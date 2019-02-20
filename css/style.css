@@ -1,4 +1,4 @@
-/* GENERAL **************************************************************************************************** */
+/* GENERAL ****************************************************************************************************** */
 
 * {
     box-sizing: border-box;
@@ -8,62 +8,48 @@
     text-decoration: none;
 }
 
-:root {
-    --yellow: #FFE964;
-    --magenta: #F00B64;
-    --pink: #F287B6;
-    --purple: #8f44cc;
-    --purple-superdark: #2a143d;
-}
-
 html {
-    color: #1c0d28;
+    background-size: cover;
+    color: #2a143d;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
-
 }
 
 body {
-    background: white;
+    background-color: white;
     width: 100%;
 }
 
 h1 {
-    font-size: 5.5vw;
-    text-align: center;
-    color: var(--purple);
+    color: #8f44cc;
     font-family: 'Bungee', sans-serif;
+    font-size: 5.5vw;
     letter-spacing: 0.07em;
+    text-align: center;
 }
 
 h2 {
-    font-size: 3.7vw;
-    text-align: left;
-    color: var(--purple);
+    color: #8f44cc;
     font-family: 'Unna', serif;
+    font-size: 3.7vw;
+    font-style: normal;
     letter-spacing: 0.05em;
     padding: 0.5em 0;
-    font-style: normal;
 }
-
-
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
     h2 {
         font-size: calc(26px + (33.3 - 26) * (100vw - 600px) / (900 - 600));
     }
-
 }
 
 @media only screen and (max-width: 600px) {
     h2 {
         font-size: 26px;
     }
-
 }
 
 .h1-etusivu {
@@ -71,13 +57,9 @@ h2 {
     font-size: 8vw;
 }
 
-.h2-etusivu {
-    text-align: center;
-}
-
 p {
-    padding: 0 0 1rem;
     line-height: 1.5rem;
+    padding: 0 0 1rem;
 }
 
 .paragraph-group {
@@ -88,10 +70,16 @@ p {
     text-align: center;
 }
 
-.shadow-purple {
-    box-shadow: -1.4rem 1.4rem var(--purple);
-    margin: 0 0 1.4rem 1.4rem;
+.shadow-yellow {
+    box-shadow: -0.7rem 0.7rem #FFE964;
+    margin: 0 0 0.7rem 0.7rem;
     border-radius: 4px;
+}
+
+.shadow-purple {
+    border-radius: 4px;
+    box-shadow: -1.4rem 1.4rem #8f44cc;
+    margin: 0 0 1.4rem 1.4rem;
 }
 
 .card-yellow {
@@ -99,21 +87,15 @@ p {
 }
 
 .card-yellow:before {
+    background-color: #FFE964;
+    border-radius: 4px;
     bottom: 2rem;
-    left: 1.4rem;
     content: "";
-    position: absolute;
-    background: var(--yellow);
-    width: 100%;
     height: 8rem;
+    left: 1.4rem;
+    position: absolute;
+    width: 100%;
     z-index: -10;
-    border-radius: 4px;
-  }
-
-.shadow-yellow {
-    box-shadow: -0.7rem 0.7rem var(--yellow);
-    margin: 0 0 0.7rem 0.7rem;
-    border-radius: 4px;
 }
 
 img {
@@ -129,42 +111,38 @@ img {
     opacity: 0.7;
 }
 
-.main-top a:hover {
-    color: var(--pink);
-}
-
 a {
-    color: var(--purple-superdark);
+    color: #2a143d;
 }
 
 a:hover {
-    color: var(--purple);
+    color: #8f44cc;
 }
 
-/* HEADER ***************************************************************************************************** */
+.small-font {
+    font-size: 12px;
+}
+
+
+
+/* HEADER ******************************************************************************************************* */
 
 .header-etusivu {
     background-attachment: fixed;
     background-image: url(../assets/etusivu/etusivu-ajak.jpg);
-    background-size: cover;
     background-position: center center;
-    height: 100vh;
+    background-size: cover;
     position: relative;
-}
-
-@media only screen and (max-width: 600px) {
-    .header-etusivu {
-        background-attachment: scroll;
-    }
+    height: 100vh;
 }
 
 nav {
     align-items: start;
-    background: var(--purple);
+    background-color: #8f44cc;
+    padding: 1rem 1rem 1.5rem;
     position: fixed;
     width: 100%;
     z-index: 100;
-    padding: 1rem 1rem 1.5rem;
 }
 
 nav a {
@@ -173,11 +151,11 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--yellow);
+    color: #FFE964;
 }
 
 .active {
-    color: var(--yellow);
+    color: #FFE964;
 }
 
 nav .fas,
@@ -197,11 +175,10 @@ nav .fab {
 }
 
 .nav-internal a {
+    display: inline-block;
     font-weight: 700;
     letter-spacing: 0.05em;
-    display: inline-block;
 }
-
 
 .nav-external a {
     display: inline-block;
@@ -210,7 +187,6 @@ nav .fab {
 .hamburger {
     display: none;
 }
-
 
 @media only screen and (max-width: 900px) {
     .hamburger {
@@ -222,8 +198,8 @@ nav .fab {
 
     .nav-internal {
         display: none;
-        position: absolute;
         left: 5.5rem;
+        position: absolute;
         top: 1.5rem;
     }
 
@@ -240,12 +216,6 @@ nav .fab {
         padding-bottom: 2rem;
     }
 
-    .nav-internal a:hover,
-    .active {
-        background: transparent;
-        color: var(--yellow);
-    }
-
     nav:hover {
         height: 100vh;
     }
@@ -257,12 +227,12 @@ nav .fab {
     nav:hover .nav-external {
         display: block;
     }
-    
-
 
 }
 
-/* MAIN ******************************************************************************************************* */
+
+
+/* MAIN ********************************************************************************************************* */
 
 .main-top {
     padding: 7rem 7vw 4rem;
@@ -275,34 +245,32 @@ nav .fab {
 }
 
 .vasemmisto-logo-main {
-    width: 350px;
     margin: 3rem 0;
+    width: 350px;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
     .vasemmisto-logo-main {
         width: calc(200px + (350 - 200) * (100vw - 600px) / (900 - 600));
     }
-
 }
 
 @media only screen and (max-width: 600px) {
     .vasemmisto-logo-main {
         width: 200px;
     }
-
 }
 
 .main-grid {
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
-    padding-left: 8vw;
-    padding-right: 10vw;
     grid-column-gap: 4vw;
     grid-row-gap: 3vw;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+    padding-left: 8vw;
+    padding-right: 10vw;
+    width: 100%;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
@@ -322,7 +290,6 @@ nav .fab {
         padding-left: 25px;
         padding-right: 35px;
     }
-
 }
 
 .lower {
@@ -338,7 +305,6 @@ nav .fab {
         padding-left: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));
         padding-right: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));        
     }
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -346,46 +312,53 @@ nav .fab {
         padding-left: 25px;
         padding-right: 25px;
     }
-
 }
 
+
+
+/* MAIN INDEX ************************************************************************** */
+
 .video-facebook {
+    background-color: black;
+    height: 0;
     overflow: hidden;
     padding-bottom: 55%;
     position: relative;
-    height: 0;
-    background: black;
 }
 
 .video-facebook iframe {
-    left: 0;
-    top: 0;
     height: 100%;
-    width: 100%;
+    left: 0;
     position: absolute;
+    top: 0;
+    width: 100%;
 }
 
+
+
+/* MAIN BLOG *************************************************************************** */
+
 .blog-link-title {
+    border-radius: 4px;
+    height: 10rem;
     margin: -3rem -0.75rem 2rem 0.75rem;
     padding: 4rem 1.5rem 1rem;
-    height: 10rem;
-    border-radius: 4px;
 }
 
 .blog-link:hover .blog-link-title {
-    background: var(--yellow);
+    background-color: #FFE964;
 }
 
 .main-grid-blogi {
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    padding-left: 8vw;
-    padding-right: 10vw;
     grid-column-gap: 6vw;
     grid-row-gap: 2vw;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    padding-left: 8vw;
+    padding-right: 10vw;
+    width: 100%;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
@@ -395,7 +368,6 @@ nav .fab {
         padding-left: calc(25px + (72 - 25) * (100vw - 600px) / (900 - 600)); 
         padding-right: calc(35px + (90 - 35) * (100vw - 600px) / (900 - 600));    
     }
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -405,14 +377,17 @@ nav .fab {
         padding-left: 25px;
         padding-right: 35px;
     }
-
 }
 
+
+
+/* MAIN LAHJOITUS ********************************************************************** */
+
 .main-holvi {
-    margin: 0 15vw 10vw;
+    align-content: space-between;
     display: flex;
     flex-direction: row;
-    align-content: space-between;
+    margin: 0 15vw 10vw;
 }
 
 .holvi-frame {
@@ -428,7 +403,6 @@ nav .fab {
         margin-left: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));
         margin-right: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600)); 
     }
-
 }
 
 @media only screen and (max-width: 700px) {
@@ -451,27 +425,30 @@ nav .fab {
     }
 }
 
+
+
+/* MAIN SV-EN ************************************************************************** */
+
 .main-sv-en {
-    margin: 0 10vw 10vw 15vw;
+    align-content: space-between;
     display: flex;
     flex-direction: row;
-    align-content: space-between;
+    margin: 0 10vw 10vw 15vw;
 }
 
 .main-sv-en img {
     height: 80vh;
-    width: auto;
     margin-top: -1rem;
+    width: auto;
     z-index: -10;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
     .main-sv-en {
+        align-content: center;
         margin-left: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));
         margin-right: calc(25px + (90 - 15) * (100vw - 600px) / (900 - 600));
-        align-content: center;
     }
-
 }
 
 @media only screen and (max-width: 700px) {
@@ -481,8 +458,8 @@ nav .fab {
 
     .main-sv-en img {
         height: auto;
-        width: 90vw;
         margin-top: -4rem;
+        width: 90vw;
     }
 
 }
@@ -491,17 +468,16 @@ nav .fab {
     .main-sv-en {
         margin-left: 25px;
         margin-right: 15px;
-
     }
-
-
 }
 
 
-.main-yhteys-social-media a {
-    padding: 0 1rem;
-    font-size: 2.5rem;
 
+/* MAIN YHTEYS ************************************************************************** */
+
+.main-yhteys-social-media a {
+    font-size: 2.5rem;
+    padding: 0 1rem;
 }
 
 address {
@@ -509,34 +485,36 @@ address {
 }
 
 address a {
-    font-size: 2rem;
-    color: var(--purple);
+    color: #8f44cc;
     font-family: 'Unna', serif;
-    letter-spacing: 0.05em;
+    font-size: 2rem;
     font-style: normal;
+    letter-spacing: 0.05em;
 }
+
+
 
 /* FOOTER ******************************************************************************************************* */
 
 footer {
-    background: var(--purple);
+    align-items: end;
+    background-color: #8f44cc;
     color: white;
-    padding: 5vw 15vw;
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 6vw 4vw;
+    grid-column-gap: 2.5rem;
     grid-template-areas:
     "vasemmisto-logo footer-ajak footer-social-media"
     "vasemmisto-logo footer-xurxe back-to-top";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 6vw 4vw;
     grid-row-gap: 2vw;
-    grid-column-gap: 2.5rem;
-    align-items: end;
+    padding: 5vw 15vw;
 }
 
 .vasemmisto-logo {
-    width: 12vw;
-    grid-area: vasemmisto-logo;
     align-self: center;
+    grid-area: vasemmisto-logo;
+    width: 12vw;
 }
 
 .vasemmisto-logo-square {
@@ -563,17 +541,13 @@ footer {
     display: block;
 }
 
-.small-font {
-    font-size: 12px;
-}
-
 footer a {
     color: white;
     transition: 0.1s;
 }
 
 footer a:hover {
-    color: var(--yellow);
+    color: #FFE964;
 }
 
 .footer-social-media {
@@ -613,7 +587,6 @@ footer a:hover {
         padding-left: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));
         padding-right: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));        
     }
-
 }
 
 @media only screen and (max-width: 600px) {
@@ -671,4 +644,3 @@ footer a:hover {
         justify-self: center;
     }
 }
-
