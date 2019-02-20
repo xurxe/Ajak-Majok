@@ -23,7 +23,8 @@ h1 {
     color: #8f44cc;
     font-family: 'Bungee', sans-serif;
     font-size: 5.5vw;
-    letter-spacing: 4px;
+    font-weight: normal;
+    letter-spacing: 0.07em;
     text-align: center;
 }
 
@@ -32,7 +33,8 @@ h2 {
     font-family: 'Unna', serif;
     font-size: 3.7vw;
     font-style: normal;
-    letter-spacing: 2px;
+    font-weight: normal;
+    letter-spacing: 0.05em;
     padding: 0.5em 0;
 }
 
@@ -161,7 +163,7 @@ nav .fab {
 .nav-internal a {
     display: inline-block;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 0.05em;
 }
 
 .nav-external a {
@@ -491,7 +493,7 @@ address a {
     font-family: 'Unna', serif;
     font-size: 2rem;
     font-style: normal;
-    letter-spacing: 2px;
+    letter-spacing: 0.05em;
 }
 
 
