@@ -379,6 +379,23 @@ nav .fab {
     }
 }
 
+.blog-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.blog-navigation a {
+    padding: 0.5rem 0;
+    transition: 0.25s;
+}
+
+.blog-navigation a:hover {
+    background-color: #FFE964;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+}
+
 
 
 /* MAIN LAHJOITUS ********************************************************************** */
