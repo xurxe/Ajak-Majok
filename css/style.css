@@ -23,7 +23,7 @@ h1 {
     color: #8f44cc;
     font-family: 'Bungee', sans-serif;
     font-size: 5.5vw;
-    letter-spacing: 0.07em;
+    letter-spacing: 4px;
     text-align: center;
 }
 
@@ -32,7 +32,7 @@ h2 {
     font-family: 'Unna', serif;
     font-size: 3.7vw;
     font-style: normal;
-    letter-spacing: 0.05em;
+    letter-spacing: 2px;
     padding: 0.5em 0;
 }
 
@@ -120,13 +120,6 @@ a:hover {
     -o-background-size: cover;
 }
 
-@media only screen and (max-width: 600px) {
-    .header-etusivu {
-        height: auto;
-        width: 100vw;
-    }
-}
-
 nav {
     align-items: start;
     background-color: #8f44cc;
@@ -168,7 +161,7 @@ nav .fab {
 .nav-internal a {
     display: inline-block;
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 2px;
 }
 
 .nav-external a {
@@ -498,7 +491,7 @@ address a {
     font-family: 'Unna', serif;
     font-size: 2rem;
     font-style: normal;
-    letter-spacing: 0.05em;
+    letter-spacing: 2px;
 }
 
 
