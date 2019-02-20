@@ -23,7 +23,7 @@ h1 {
     color: #8f44cc;
     font-family: 'Bungee', sans-serif;
     font-size: 5.5vw;
-    font-weight: normal;
+    font-weight: normal !important; 
     letter-spacing: 0.07em;
     text-align: center;
 }
@@ -33,7 +33,7 @@ h2 {
     font-family: 'Unna', serif;
     font-size: 3.7vw;
     font-style: normal;
-    font-weight: normal;
+    font-weight: normal !important;
     letter-spacing: 0.05em;
     padding: 0.5em 0;
 }
