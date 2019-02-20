@@ -9,13 +9,9 @@
 }
 
 html {
-    background-size: cover;
     color: #2a143d;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
 }
 
 body {
@@ -80,22 +76,7 @@ p {
     border-radius: 4px;
     box-shadow: -1.4rem 1.4rem #8f44cc;
     margin: 0 0 1.4rem 1.4rem;
-}
-
-.card-yellow {
     position: relative;
-}
-
-.card-yellow:before {
-    background-color: #FFE964;
-    border-radius: 4px;
-    bottom: 2rem;
-    content: "";
-    height: 8rem;
-    left: 1.4rem;
-    position: absolute;
-    width: 100%;
-    z-index: -10;
 }
 
 img {
@@ -128,12 +109,15 @@ a:hover {
 /* HEADER ******************************************************************************************************* */
 
 .header-etusivu {
-    background-attachment: fixed;
     background-image: url(../assets/etusivu/etusivu-ajak.jpg);
     background-position: center center;
     background-size: cover;
-    position: relative;
     height: 100vh;
+    position: relative;
+    top: 0;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
 nav {
@@ -343,6 +327,7 @@ nav .fab {
     height: 10rem;
     margin: -3rem -0.75rem 2rem 0.75rem;
     padding: 4rem 1.5rem 1rem;
+    transition: 0.25s;
 }
 
 .blog-link:hover .blog-link-title {
