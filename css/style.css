@@ -22,8 +22,8 @@ body {
 h1 {
     color: #8f44cc;
     font-family: 'Bungee', sans-serif;
-    font-size: 5.5vw;
-    font-weight: normal !important; 
+    font-size: 6vw;
+    font-weight: normal; 
     text-align: center;
 }
 
@@ -32,8 +32,15 @@ h2 {
     font-family: 'Unna', serif;
     font-size: 4vw;
     font-style: normal;
-    font-weight: normal !important;
+    font-weight: normal;
     padding: 0.5em 0;
+}
+
+h3 {
+    font-size: 1rem;
+    font-style: bold;
+    line-height: 1.5rem;
+    margin: 1rem 0;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
@@ -132,6 +139,7 @@ nav {
 nav a {
     color: white;
     padding: 0 0.6rem;
+    transition: 0.1s;
 }
 
 nav a:hover {
@@ -175,7 +183,7 @@ nav .fab {
     display: none;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
     .hamburger {
         display: inline-block;
         position: absolute;
@@ -359,6 +367,42 @@ nav .fab {
     top: 0;
     width: 100%;
 }
+
+
+/* MAIN AJAKISTA *********************************************************************** */
+
+.main-grid-ajakista {
+    display: grid;
+    grid-auto-flow: row;
+    grid-column-gap: 6vw;
+    grid-row-gap: 10vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding-bottom: 4rem;
+    padding-left: 8vw;
+    padding-right: 10vw;
+    width: 100%;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1100px) {
+    .main-grid-ajakista {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        padding-left: calc(25px + (88 - 25) * (100vw - 700px) / (1100 - 700)); 
+        padding-right: calc(35px + (110 - 35) * (100vw - 700px) / (1100 - 700));    
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .main-grid-ajakista {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding-left: 25px;
+        padding-right: 35px;
+    }
+}
+
 
 
 
