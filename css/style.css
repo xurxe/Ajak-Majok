@@ -265,6 +265,10 @@ nav .fab {
     height: 100%;
     object-fit: cover;
     object-position: 50% 40%;
+    -webkit-object-fit: cover;
+    -moz-object-fit: cover;
+    -o-object-fit: cover;
+    -ms-object-fit: cover;
 }
 
 
