@@ -12,6 +12,7 @@ html {
     color: #2a143d;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
