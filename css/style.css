@@ -344,6 +344,29 @@ nav .fab {
     }
 }
 
+.photo-caption-main-grid {
+    padding-left: 8vw;
+    padding-right: 10vw;
+    padding-top: 1.5rem;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .photo-caption-main-grid {
+        padding-left: calc(25px + (72 - 25) * (100vw - 600px) / (900 - 600)); 
+        padding-right: calc(35px + (90 - 35) * (100vw - 600px) / (900 - 600));    
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .photo-caption-main-grid {
+        padding-left: 25px;
+        padding-right: 35px;
+    }
+}
+
+
+
 .lower {
     margin-top: 5rem;
 }
