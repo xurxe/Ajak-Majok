@@ -102,6 +102,7 @@ img {
 
 a {
     color: #2a143d;
+    font-weight: normal;
 }
 
 a:hover {
