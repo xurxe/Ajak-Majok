@@ -253,11 +253,15 @@ nav .fab {
 .etusivu-pic-top img {
     height: 100%;
     object-fit: cover;
-    object-position: 50% 40%;
     -webkit-object-fit: cover;
     -moz-object-fit: cover;
     -o-object-fit: cover;
     -ms-object-fit: cover;
+    object-position: 50% 40%;
+    -webkit-object-position: cover;
+    -moz-object-position: cover;
+    -o-object-position: cover;
+    -ms-object-position: cover;
 }
 
 .main-top {
