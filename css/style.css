@@ -45,7 +45,7 @@ h3 {
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
     h2 {
-        font-size: calc(29px + (36 - 29) * (100vw - 600px) / (900 - 600));
+        font-size: calc(29px + 7 * (100vw - 600px) / 300);
     }
 }
 
@@ -193,7 +193,7 @@ nav .fab {
 
     @media only screen and (min-width: 600px) and (max-width: 900px) {
         .ajak-majok-hamburger {
-            font-size: calc(20px + (34 - 20) * (100vw - 600px) / (900 - 600));
+            font-size: calc(20px + 14 * (100vw - 600px) / 300);
         }
     }
     
@@ -254,6 +254,10 @@ nav .fab {
     height: 100%;
     object-fit: cover;
     object-position: 50% 40%;
+    -webkit-object-fit: cover;
+    -moz-object-fit: cover;
+    -o-object-fit: cover;
+    -ms-object-fit: cover;
 }
 
 .main-top {
@@ -273,7 +277,7 @@ nav .fab {
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
     .vasemmisto-logo-main {
-        width: calc(200px + (350 - 200) * (100vw - 600px) / (900 - 600));
+        width: calc(200px + 150 * (100vw - 600px) / 300);
     }
 }
 
@@ -299,8 +303,8 @@ nav .fab {
     .main-grid {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        padding-left: calc(25px + (72 - 25) * (100vw - 600px) / (900 - 600)); 
-        padding-right: calc(35px + (90 - 35) * (100vw - 600px) / (900 - 600));    
+        padding-left: calc(25px + 47 * (100vw - 600px) / 300); 
+        padding-right: calc(35px + 50 * (100vw - 600px) / 300);    
     }
 
 }
@@ -322,8 +326,8 @@ nav .fab {
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
     .photo-caption-main-grid {
-        padding-left: calc(25px + (72 - 25) * (100vw - 600px) / (900 - 600)); 
-        padding-right: calc(35px + (90 - 35) * (100vw - 600px) / (900 - 600));    
+        padding-left: calc(25px + 47 * (100vw - 600px) / 300); 
+        padding-right: calc(35px + 55 * (100vw - 600px) / 300);    
     }
 
 }
@@ -347,8 +351,8 @@ nav .fab {
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
     .main-text-and-image {
-        padding-left: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));
-        padding-right: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));        
+        padding-left: calc(25px + 110 * (100vw - 600px) / 300);
+        padding-right: calc(25px + 110 * (100vw - 600px) / 300);        
     }
 }
 
@@ -399,8 +403,8 @@ nav .fab {
     .main-grid-ajakista {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
-        padding-left: calc(25px + (88 - 25) * (100vw - 700px) / (1100 - 700)); 
-        padding-right: calc(35px + (110 - 35) * (100vw - 700px) / (1100 - 700));    
+        padding-left: calc(25px + 63 * (100vw - 700px) / 400); 
+        padding-right: calc(35px + 75 * (100vw - 700px) / 400);    
     }
 
 }
@@ -447,8 +451,8 @@ nav .fab {
     .main-grid-blogi {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        padding-left: calc(25px + (72 - 25) * (100vw - 600px) / (900 - 600)); 
-        padding-right: calc(35px + (90 - 35) * (100vw - 600px) / (900 - 600));    
+        padding-left: calc(25px + 47 * (100vw - 600px) / 300); 
+        padding-right: calc(35px + 55 * (100vw - 600px) / 300);    
     }
 }
 
@@ -499,8 +503,8 @@ nav .fab {
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
     .main-holvi {
-        margin-left: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));
-        margin-right: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600)); 
+        margin-left: calc(25px + 110 * (100vw - 600px) / 300);
+        margin-right: calc(25px + 110 * (100vw - 600px) / 300); 
     }
 }
 
@@ -510,8 +514,8 @@ nav .fab {
     }
 
     .holvi-text {
-        margin-left: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));
-        margin-right: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600)); 
+        margin-left: calc(25px + 110 * (100vw - 600px) / 300);
+        margin-right: calc(25px + 110 * (100vw - 600px) / 300); 
     }
 
 }
@@ -545,8 +549,8 @@ nav .fab {
 @media only screen and (min-width: 600px) and (max-width: 900px) {
     .main-sv-en {
         align-content: center;
-        margin-left: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));
-        margin-right: calc(25px + (90 - 15) * (100vw - 600px) / (900 - 600));
+        margin-left: calc(25px + 110 * (100vw - 600px) / 300);
+        margin-right: calc(25px + 75 * (100vw - 600px) / 300);
     }
 }
 
@@ -682,8 +686,8 @@ footer a:hover {
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
     footer {
-        padding-left: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));
-        padding-right: calc(25px + (135 - 25) * (100vw - 600px) / (900 - 600));        
+        padding-left: calc(25px + 110 * (100vw - 600px) / 300);
+        padding-right: calc(25px + 110 * (100vw - 600px) / 300);        
     }
 }
 
