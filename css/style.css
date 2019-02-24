@@ -123,7 +123,7 @@ a:hover {
 nav {
     align-items: start;
     background-color: #8f44cc;
-    padding: 1rem 1rem 1.5rem;
+    padding: 1rem 1rem 1rem;
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -184,27 +184,26 @@ nav .fab {
     }
 
     .ajak-majok-hamburger {
-        bottom: 0.4rem;
         color: white; 
         display: inline-block;
         font-family: 'Bungee', sans-serif;
         font-size: 34px;
-        left: 30%;
+        left: 10%;
         position: absolute;
-        right: 30%;
+        right: 10%;
         text-align: center;
         text-justify: center;
     }
 
     @media only screen and (min-width: 600px) and (max-width: 900px) {
         .ajak-majok-hamburger {
-            font-size: calc(20px + 14 * (100vw - 600px) / 300);
+            font-size: calc(16px + 18 * (100vw - 600px) / 300);
         }
     }
     
     @media only screen and (max-width: 600px) {
         .ajak-majok-hamburger {
-            font-size: 20px;
+            font-size: 16px;
         }
     }
 
