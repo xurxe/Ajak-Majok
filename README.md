@@ -13,10 +13,10 @@ Find the site here: http://ajakmajok.com/
 - Web designer and developer: Xurxe Toivo García
 - Client and writer: Ajak Majok
 - Photographers:
-    - Remu Karhulahti
     - Hannah-Cajsa Bäck
-    - Mikael Kinanen
     - Uwa Iduozee
+    - Remu Karhulahti
+    - Mikael Kinanen
 
 ## License
 

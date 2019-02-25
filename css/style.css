@@ -116,6 +116,16 @@ a:hover {
     font-size: 12px;
 }
 
+strong {
+    color: #8f44cc;
+    display: block;
+    font-family: 'Unna', serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: normal;
+    padding: 0.5em 0;
+}
+
 
 
 /* HEADER ******************************************************************************************************* */
