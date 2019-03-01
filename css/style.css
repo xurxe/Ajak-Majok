@@ -1,3 +1,21 @@
+/* 
+Photo proportions:
+- Most: 4x3
+- Social media thumbnails: 1.91x1
+- Ajakista sanottua: 1x1
+
+Photo widths:
+- Social media thumbnails: 1200px (max 1mb)
+- Etusivu grid: 500px
+- Ajak: 1200px
+- Ajakista sanottua: 600px
+- Blog thumbnails: 500px
+- Blog main: 1000px
+- English long: 1200px
+
+*/
+
+
 /* GENERAL ****************************************************************************************************** */
 
 * {
@@ -6,6 +24,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -427,7 +446,7 @@ nav .fab {
     display: grid;
     grid-auto-flow: row;
     grid-column-gap: 6vw;
-    grid-row-gap: 10vw;
+    grid-row-gap: 5vw;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     padding-bottom: 4rem;
