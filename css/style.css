@@ -88,6 +88,12 @@ p {
     padding: 0 0 1rem;
 }
 
+li {
+    line-height: 1rem;
+    padding: 0 2rem 1rem;
+    list-style-position: inside;
+}
+
 .numero {
     color: white;
     display: inline-block;
